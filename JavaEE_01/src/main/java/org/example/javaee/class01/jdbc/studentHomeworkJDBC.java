@@ -31,7 +31,7 @@ public class studentHomeworkJDBC {
             e.printStackTrace();
         }
 
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                 String sql = "insert into s_student (id,name,create_time,update_time) values(? ,?,?,?)";
                 PreparedStatement ps = connection.prepareStatement(sql);
@@ -67,7 +67,7 @@ public class studentHomeworkJDBC {
             e.printStackTrace();
         }
 
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                 String sql = "insert into s_homework (id,title,content,create_time,update_time) values(?,?,?,?,?)";
                 PreparedStatement ps = connection.prepareStatement(sql);
@@ -106,7 +106,7 @@ public class studentHomeworkJDBC {
         }
 
         List<StudentHomework> list = new ArrayList<>();
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                     String sql = "insert into s_student_homework (id,student_id,homework_id,homework_title,homework_content,create_time,update_time) values(?,?,?,?,?,?,?)";
                     PreparedStatement ps = connection.prepareStatement(sql);
@@ -147,7 +147,7 @@ public class studentHomeworkJDBC {
         }
 
         List<Homework> list = new ArrayList<>();
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                 try(ResultSet resultSet = statement.executeQuery(sqlString)){                           // 获取执行结果
                     while(resultSet.next()){
@@ -186,7 +186,7 @@ public class studentHomeworkJDBC {
         }
 
         List<Student> list = new ArrayList<>();
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                 try(ResultSet resultSet = statement.executeQuery(sqlString)){                           // 获取执行结果
                     while(resultSet.next()){
@@ -224,7 +224,7 @@ public class studentHomeworkJDBC {
         }
 
         List<StudentHomework> list = new ArrayList<>();
-        try(Connection connection = DriverManager.getConnection(url,"root","123456")){  // 创建连接
+        try(Connection connection = DatabasePool.getHikariDataSource().getConnection()){  // 创建连接
             try(Statement statement = connection.createStatement()){                                    // 通过链接获取statement
                 try(ResultSet resultSet = statement.executeQuery(sqlString)){                           // 获取执行结果
                     while(resultSet.next()){

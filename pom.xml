@@ -13,6 +13,10 @@
         <module>JavaEE_02</module>
         <module>core</module>
         <module>db</module>
+        <module>JavaEE-01</module>
+        <module>JavaEE-01</module>
+        <module>JavaEE-01</module>
+        <module>javaEE_web_test</module>
     </modules>
 
     <dependencyManagement>
@@ -34,6 +38,13 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.19</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>3.4.2</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
