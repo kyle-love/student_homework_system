@@ -18,6 +18,7 @@ public class DatabasePool {
                 String JDBCurl = "jdbc:mysql://127.0.0.1:3306/school?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false";
                 HikariConfig  hikariConfig = new HikariConfig();
                 hikariConfig.setUsername("root");
+
                 hikariConfig.setPassword("123456");
                 hikariConfig.setJdbcUrl(JDBCurl);
                 hikariConfig.setDriverClassName(driverName);
