@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="testBean" class="testers1" scope="prototype" >-->
+<!--        <constructor-arg type="java.lang.Long" value="123" />-->
+<!--        <constructor-arg type="java.lang.String" value="One name" />-->
+    <!--视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- webroot到一指定文件夹文件路径 -->
+        <property name="prefix" value="/"/>
+        <!-- 视图名称后缀  -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+<!--    </bean>-->
+</beans>

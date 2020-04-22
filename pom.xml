@@ -13,10 +13,7 @@
         <module>JavaEE_02</module>
         <module>core</module>
         <module>db</module>
-        <module>JavaEE-01</module>
-        <module>JavaEE-01</module>
-        <module>JavaEE-01</module>
-        <module>javaEE_web_test</module>
+        <module>JavaEE_SpringMVC</module>
     </modules>
 
     <dependencyManagement>
@@ -37,6 +34,20 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.19</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>5.2.3.RELEASE</version>
             </dependency>
 
             <dependency>
